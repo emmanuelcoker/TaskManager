@@ -1,7 +1,7 @@
 <h1>How to SetUp</h1>
 
 <p>
-    Clone your project
+    Clone the project
     <br>
     Go to the folder application using cd command on your cmd or terminal
     <br>
