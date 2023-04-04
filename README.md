@@ -23,4 +23,6 @@
     Run php artisan serve
     <br>
     Go to 127.0.0.1:8000
+    <br>
+    register as user or login as admin with email: admin@gmail.com , password: password
 </p>
