@@ -8,6 +8,7 @@ use App\Models\User;
 use App\Models\Role;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Http\Request;
 
@@ -89,7 +90,7 @@ class RegisterController extends Controller
             $role = Role::where('role_name', 'user')->first();
             auth()->user()->roles()->attach($role);
             //dispatch new user event
-            return redirect()->intended('home')->with('success', 'You have registered Successfully!')->withCookie($cookie);
+            return redirect()->intended('home')->with('success', 'You have registered Successfully!');
         }
  
         return back()->withErrors([
