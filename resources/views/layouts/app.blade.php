@@ -20,9 +20,12 @@
 </head>
 <body>
     <div id="app" class="container-fluid p-0" style="width:100%;">
+    
         <nav class="navbar navbar-expand-md shadow-sm" style="background-color:#6fd6ff;">
             <div class="container-fluid p-2 px-3">
+                @auth
                 <div id="sideNavOpen" style="font-size: 2em; margin-right: 20px;"><i class="fa fa-bars"></i></div>
+                @endauth
                 <a class="navbar-brand" href="{{ url('/') }}" style="font-size:2em; font-weight: 600;">
                     {{ config('app.name', 'Task Manager') }}
                 </a>
@@ -38,6 +41,7 @@
         </nav>
 
         <main class="py-4">
+            @auth
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" id="sideNavClose">&times;</a>
                 <a href="{{ route('home') }}">Home</a>
@@ -77,7 +81,9 @@
                                 </li>
                             @endguest
                         </ul>
-            </div>
+            </div>    
+            @endauth
+           
 
             <!-- Use any element to open the sidenav -->
             <div id="content">
